@@ -5,6 +5,12 @@
 const prompt = require("prompt-sync");
 const ask = prompt();
 
-const primeiroNumero = ask("Informe o primeiro número: ");
-const segundoNumero = ask("Informe o segundo número: ");
+let valorX = ask("Informe o valor de x: ");
+let valorY = ask("Informe o valor de y: ");
 
+let z = valorX;
+valorX = valorY;
+valorY = z;
+
+console.log(`O valor de x e: ${valorX}`);
+console.log(`O valor de y e: ${valorY}`);

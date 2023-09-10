@@ -10,10 +10,33 @@ const prompt = require("prompt-sync");
 const ask = prompt();
 
 const a = ask("Informe o valor de A: ");
-const b = ask("Informe o valor de B: ");
-const c = ask("Informe o valor de C: ");
-
 const A = Number(a);
-const B = Number(b);
-const C = Number(c);
-let delta = (b*b - 4*a*c);
+
+if (A == 0) {
+    console.log("A equacao nao e de segundo grau");
+} else{
+    const b = ask("Informe o valor de B: ");
+    const c = ask("Informe o valor de C: ");
+    
+    const B = Number(b);
+    const C = Number(c);
+    let delta = (B*B - 4*A*C);
+    
+        if (delta < 0) {
+            console.log("A equacao nao possui raizes reais");
+        }
+        
+        if (delta == 0) {
+            let raizUm = ((-B + Math.sqrt(delta))/2*A);
+        
+            console.log(`A equacao possui uma raiz real = ${raizUm}`);
+        }
+        
+        if (delta > 0) {
+            let raizUm = ((-B + Math.sqrt(delta))/2*A);
+            let raizDois = ((-B - Math.sqrt(delta))/2*A);
+        
+            console.log(`A equacao possui duas raizes reais, sendo elas: ${raizUm} e ${raizDois}`);
+        }
+}
+
