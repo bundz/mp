@@ -21,25 +21,40 @@ const litros = ask("Digite quantos litros de combustivel voce gostaria de adquir
 const Litros = Number(litros);
 let alcool = 2.52;
 let gasolina = 5.87;
+let litrosAbastecidos = 0;
+let totalPagar = 0;
 
 if (combustivel == "A") {
-    if (Litros <= 20) {
-        desconto = alcool*0.03;
+    if (Litros == 0) {
+        console.log(`Insira um valor válido de litros.`);
+    } else {
+        if (Litros > 0 && Litros <= 20) {
+            litrosAbastecidos = (alcool*Litros);
+            desconto = (litrosAbastecidos*0.03);
+        }
+        else {
+            litrosAbastecidos = (alcool*Litros);
+            desconto = (litrosAbastecidos*0.05);
+        }
+        totalPagar = (litrosAbastecidos-desconto);
     }
-    else {
-        desconto = alcool*0.05;
-    }
-    totalPagar = ((alcool*Litros)-desconto);
 }
 
 if (combustivel == "G") {
-    if (Litros <= 20) {
-        desconto = gasolina*0.04;
+    if (Litros == 0) {
+        console.log(`Insira um valor válido de litros.`);
+    } else {
+        if (Litros > 0 && Litros <= 20) {
+            litrosAbastecidos = (gasolina*Litros);
+            desconto = (litrosAbastecidos*0.04);
+        }
+        else {
+            litrosAbastecidos = (gasolina*Litros);
+            desconto = litrosAbastecidos*0.06;
+        }
+        totalPagar = (litrosAbastecidos-desconto);
     }
-    else {
-        desconto = gasolina*0.06;
-    }
-    totalPagar = ((gasolina*Litros)-desconto);
+
 }
 
 console.log(`O valor a ser pago e: ${totalPagar}`);

@@ -16,7 +16,7 @@ const restoUm = Ano % 4;
 const restoDois = Ano % 100;
 const restoTres = Ano % 400;
 
-if (restoUm == 0 && restoDois != 0 && restoTres == 0) {
+if (restoUm == 0 && restoDois != 0 || restoTres == 0) {
     console.log(`O ${ano} e bissexto.`);
 } else {
     console.log(`O ${ano} nao e bissexto.`);
