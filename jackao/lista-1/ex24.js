@@ -6,7 +6,7 @@ const ask = prompt();
 
 const numero = ask("Informe um valor: ");
 valor = Number(numero);
-let resto = a % 2;
+let resto = valor % 2;
 
 if (resto == 0) {
     console.log(`${valor} é par!`);

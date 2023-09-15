@@ -34,6 +34,6 @@ if (weekDay == 7) {
     console.log("Sábado");
 }
 
-if (weekday > 7) { console.log("Valor Inválido")
+if (weekDay > 7) { console.log("Valor Inválido")
 }
 

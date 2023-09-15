@@ -12,5 +12,5 @@ let segundoValor = Number(segundoNumero);
 if(primeiroValor > segundoValor) {
     console.log(`O ${primeiroValor} é o maior!`);
 } else {
-    console.log(`O ${segundoValor} é o maior!`);
+    console.log(`O ${segundoValor} é o menor!`);
 }

@@ -58,6 +58,6 @@ if(resposta == 3 || resposta == 4) {
 if(resposta == 5) {
     console.log("Assasino");
 }
-if(resposta == 1) {
+if(resposta <= 1) {
     console.log("Inocente");
 }

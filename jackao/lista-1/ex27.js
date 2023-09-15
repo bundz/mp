@@ -5,9 +5,9 @@
 const prompt = require("prompt-sync");
 const ask = prompt();
 
-const dia = ask("Qual o dia do seu aniversário");
-const mes = ask("Qual o mês do seu aniversário");
-const ano = ask("Qual o ano do seu aniversário");
+const dia = ask("Qual o dia do seu aniversário: ");
+const mes = ask("Qual o mês do seu aniversário: ");
+const ano = ask("Qual o ano do seu aniversário: ");
 
 if (dia >0 && dia <= 31 && mes >= 1 && mes <=12 && ano > 1913 && ano <= 2013) {
     console.log(`Então você nasceu em: ${dia}/${mes}/${ano}`);
