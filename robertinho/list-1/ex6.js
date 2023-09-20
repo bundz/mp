@@ -6,16 +6,18 @@ const ask = prompt();
 const primeiroNumero = ask("Por favor insira o 1º numero: ");
 const segundoNumero = ask("Por favor insira o 2º numero: ");
 const terceiroNumero = ask("Por favor insira o 3º numero: ");
-const a = Number(primeiroNumero);
-const b = Number(segundoNumero);
-const c = Number(terceiroNumero);
+const valorUm = Number(primeiroNumero);
+const valorDois = Number(segundoNumero);
+const valorTres = Number(terceiroNumero);
 
-if (a > b && a > c) {
-    console.log(`O maior número é o: ${a}`);
+let result=valorUm; 
+
+if (valorDois > result) {
+    result = valorDois;
 }
-if (b > a && b > c) {
-    console.log(`O maior número é o: ${b}`);
+
+if (valorTres > result) {
+    result = valorTres;
 }
-if (c > a && c > b) {
-    console.log(`O maior número é o: ${c}`);
-}
+
+console.log(`O maior numero: ${result}`);

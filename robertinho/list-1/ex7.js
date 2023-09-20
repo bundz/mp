@@ -6,26 +6,27 @@ const ask = prompt();
 const primeiroNumero = ask("Por favor insira o 1º valor: ");
 const segundoNumero = ask("Por favor insira o 2º valor: ");
 const terceiroNumero = ask("Por favor insira o 3º valor: ");
-const a = Number(primeiroNumero);
-const b = Number(segundoNumero);
-const c = Number(terceiroNumero);
+const valorUm = Number(primeiroNumero);
+const valorDois = Number(segundoNumero);
+const valorTres = Number(terceiroNumero);
 
-if (a > b && a > c) {
-    console.log(`O maior número é o: ${a}`);
-}
-if (b > a && b > c) {
-    console.log(`O maior número é o: ${b}`);
-}
-if (c > a && c > b) {
-    console.log(`O maior número é o: ${c}`);
+let resultMaior = valorUm;
+let resultMenor = valorUm;
+
+if (valorDois > resultMaior) {
+    resultMaior = valorDois;
 }
 
-if (a < b && a < c) {
-    console.log(`O menor número é o: ${a}`);
+if (valorTres > resultMaior) {
+    resultMaior = valorTres;
 }
-if (b < a && b < c) {
-    console.log(`O menor número é o: ${b}`);
+
+if (resultMenor > valorDois) {
+    resultMenor = valorDois;
 }
-if (c < a && c < b) {
-    console.log(`O menor número é o: ${c}`);
+
+if (resultMenor > valorTres) {
+    resultMenor = valorTres;
 }
+
+console.log(`O maior numero e: ${resultMaior} e o menor e: ${resultMenor}`);

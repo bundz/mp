@@ -14,30 +14,28 @@ const prompt = require("prompt-sync");
 const ask = prompt();
 
 const salario = ask("Informe o teu salário: ");
-const a = Number(salario);
+const Salario = Number(salario);
 let reajuste = 0;
-const b = Number(reajuste);
 let aumento = 0;
-const c = Number(aumento);
 
-if (a <= 280) {
-    b = 0.2;
-    c = a*b; 
+if (Salario <= 280) {
+    reajuste = 0.2;
+    aumento = Salario*reajuste; 
 }
-if (a > 280 && a <= 699) {
-    b = 0.15;
-    c = a*b; 
+if (Salario > 280 && Salario <= 699) {
+    reajuste = 0.15;
+    aumento = Salario*reajuste; 
 }
-if (a >= 700 && a <= 1499) {
-    b = 0.10;
-    c = a*b; 
+if (Salario >= 700 && Salario <= 1499) {
+    reajuste = 0.1;
+    aumento = Salario*reajuste; 
 }
-if (a >= 1500) {
-    b = 0.5;
-    c = a*b; 
+if (Salario >= 1500) {
+    reajuste = 0.05;
+    aumento = Salario*reajuste; 
 }
 
-console.log(`a) O salário antes do reajuste é = ${a}`);
-console.log(`b) O percentual do reajuste é = ${b}`);
-console.log(`c) O valor do aumento é = ${c}`);
-console.log(`d) O novo salário é = ${a+c}`);
+console.log(`a) O salário antes do reajuste é = ${Salario}`);
+console.log(`b) O percentual do reajuste é = ${reajuste*100}%`);
+console.log(`c) O valor do aumento é = ${aumento}`);
+console.log(`d) O novo salário é = ${Salario+aumento}`);

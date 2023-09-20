@@ -6,30 +6,36 @@ const ask = prompt();
 const primeiroNumero = ask("1º número: ");
 const segundoNumero = ask("2º número: ");
 const terceiroNumero = ask("3º número: ");
-const a = Number(primeiroNumero);
-const b = Number(segundoNumero);
-const c = Number(terceiroNumero);
+const numeroUm = Number(primeiroNumero);
+const numeroDois = Number(segundoNumero);
+const numeroTres = Number(terceiroNumero);
 
-if (a > b && a > c && b > c) {
-    console.log(a,b,c);
+let posicaoUm = numeroUm;
+let posicaoDois = numeroDois;
+let posicaoTres = numeroTres;
+
+if (numeroDois < posicaoUm && numeroDois < numeroTres) {
+    posicaoUm = numeroDois;
 }
 
-if (a > b && a > c && c > b) {
-    console.log(a,c,b);
+if (numeroTres < posicaoUm && numeroTres < numeroDois) {
+    posicaoUm = numeroTres;
 }
 
-if (b > a && b > c && a > c) {
-    console.log(b,a,c);
+if (numeroUm > posicaoDois && numeroUm > numeroTres) {
+    posicaoDois = numeroUm;
 }
 
-if (b > a && b > c && c > a) {
-    console.log(b,c,a);
+if (numeroTres < posicaoDois && numeroTres < numeroDois) {
+    posicaoDois = numeroTres;
 }
 
-if (c > a && c > b && a > b) {
-    console.log(c,a,b);
+if (numeroUm > posicaoTres && numeroUm > numeroDois) {
+    posicaoTres = numeroUm;
 }
 
-if (c > a && c > b && b > a) {
-    console.log(c,b,a);
+if (numeroDois > posicaoTres && numeroDois > numeroUm) {
+    posicaoTres = numeroDois;
 }
+
+console.log(`Ordem Decrescente:(${posicaoTres};${posicaoDois};${posicaoUm})`);
