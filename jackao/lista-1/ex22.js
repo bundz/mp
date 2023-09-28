@@ -10,7 +10,9 @@ let primeiroValor = Number(primeiroNumero);
 let segundoValor = Number(segundoNumero);
 
 if(primeiroValor > segundoValor) {
-    console.log(`O ${primeiroValor} é o maior!`);
-} else {
-    console.log(`O ${segundoValor} é o menor!`);
+    console.log(`O ${primeiroValor} é o maior! e o ${segundoValor} é o menor!`);
+} 
+
+if(segundoValor > primeiroValor) {
+    console.log(`O ${segundoValor} é o maior! e o ${primeiroValor} é o menor!`);
 }

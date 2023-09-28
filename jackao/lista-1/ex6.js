@@ -12,18 +12,21 @@ let segundoValor = Number(segundoNumero);
 let terceiroValor = Number(terceiroNumero);
 
 if(primeiroValor > segundoValor && primeiroValor > terceiroValor) {
-    console.log(`O ${primeiroValor} é o maior!`)
+    console.log(`O ${primeiroValor} é o maior!`);
 
 }
 
 if(segundoValor > primeiroValor && segundoValor > terceiroValor) {
-    console.log(`O ${segundoValor} é o maior!`)
+    console.log(`O ${segundoValor} é o maior!`);
 
 
 }
 if(terceiroValor > primeiroValor && terceiroValor > segundoValor) {
-    console.log(`O ${terceiroValor} é o maior!`)
+    console.log(`O ${terceiroValor} é o maior!`);
 
 }
 
+if(primeiroValor == segundoValor && primeiroValor == terceiroValor && segundoValor == terceiroValor) {
+    console.log(`O ${primeiroValor} é igual em amos os três!`);
+}
 

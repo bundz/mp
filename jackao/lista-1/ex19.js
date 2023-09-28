@@ -13,8 +13,6 @@ const operacao = ask("Qual operação você deseja realizar? ")
 let primeiroValor = Number(primeiroNumero);
 let segundoValor = Number(segundoNumero);
 let resultado = 0;
-let resto = resultado % 2;
-let parImpar = 0;
 
 if(operacao == "soma") {
     resultado = primeiroValor + segundoValor;
@@ -32,6 +30,8 @@ if(operacao == "divisao") {
     resultado = primeiroValor / segundoValor;
     console.log (`O resultado da divisão é ${resultado}`);
 }
+
+let resto = resultado % 2;
 
 if (resto == 0) {
     console.log("Par");

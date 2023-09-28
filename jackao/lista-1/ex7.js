@@ -43,6 +43,11 @@ if(terceiroValor < primeiroValor && terceiroValor < segundoValor) {
     menorNumero = terceiroValor;
 }
 
+
+if(primeiroValor == segundoValor && primeiroValor == terceiroValor && segundoValor == terceiroValor) {
+    console.log(`O ${primeiroValor} é igual em amos os três!`);
+}
+
 console.log(`O maior número é o ${maiorNumero}`);
 console.log(`O menor número é o ${menorNumero}`);
 
