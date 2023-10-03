@@ -10,7 +10,42 @@ let numeroUm = Number(valorUm);
 let numeroDois = Number(valorDois);
 let numeroTres = Number(valorTres);
 
-console.log(`Valores inseridos: ${numeroUm},${numeroDois},${numeroTres}`);
+let primeiroNumero = numeroUm;
+let segundoNumero = numeroUm;
+let terceiroNumero = numeroUm;
 
-//Preciso criar 3 whiles? ideia inicial: 1 while com if do primeiro ser maior que todos e ocupar a posicao 1,
-//caso contrario arrumar posicao (2 ou 3), depois para o segundo ser maior e por ultimo o terceiro ser maior.
+if(numeroDois >= numeroUm && numeroDois >= numeroTres) {
+    primeiroNumero = numeroDois;
+}
+
+if(numeroTres >= numeroUm && numeroTres >= numeroDois) {
+    primeiroNumero = numeroTres;
+}
+
+if(numeroDois >= numeroTres && numeroDois <= numeroUm) {
+    segundoNumero = numeroDois;
+}
+
+if(numeroDois >= numeroUm && numeroDois <= numeroTres) {
+    segundoNumero = numeroDois;
+}
+
+if(numeroTres >= numeroUm && numeroTres <= numeroDois) {
+    segundoNumero = numeroTres;
+}
+
+if(numeroTres >= numeroDois && numeroTres <= numeroUm) {
+    segundoNumero = numeroTres;
+}
+
+if(numeroDois <= numeroUm && numeroDois <= numeroTres) {
+    terceiroNumero = numeroDois;
+}
+
+if(numeroTres <= numeroUm && numeroTres <= numeroDois) {
+    terceiroNumero = numeroTres;
+}
+
+console.log(`Valores inseridos: ${numeroUm},${numeroDois},${numeroTres}`);
+console.log(`Ordem Decrescente: ${primeiroNumero},${segundoNumero},${terceiroNumero}`);
+console.log(`Ordem Crescente: ${terceiroNumero},${segundoNumero},${primeiroNumero}`);

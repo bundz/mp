@@ -4,10 +4,9 @@ const prompt = require("prompt-sync");
 const ask = prompt();
 
 const valor = ask("Me informe um valor: ");
-let numero = Number(valor);
+let soma = 0;
 
-for (let i = 1, soma = 0; i <= numero; i = i + 1) {
+for (let i = 1; i <= valor; i = i + 1) {
     soma = soma + 1/i;
-    
-    console.log(`${soma}`);
 }
+console.log(`${soma}`);

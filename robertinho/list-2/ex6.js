@@ -5,8 +5,9 @@ const prompt = require("prompt-sync");
 const ask = prompt();
 
 let faturamentoB = 54000;
+let soma = 0;
 
-for ( let i = 0, soma = 0; i < 5; i = i + 1) {
+for ( let i = 0; i < 5; i = i + 1) {
     const fechamento = ask("Me informe o fechamento do cliente: ");
 
     const valor = Number(fechamento);
