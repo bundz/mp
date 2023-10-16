@@ -5,12 +5,15 @@
 const prompt = require("prompt-sync");
 const ask = prompt();
 
-let pessoas = 15;
+let pessoas = 5;
 let peso1a10 = 0;
 let peso11a20 = 0;
 let peso21a30 = 0;
 let pesoMais31 = 0;
-
+let pessoas1a10 = 0;
+let pessoas11a20 = 0;
+let pessoas21a30 = 0;
+let pessoasMais31 = 0;
 
 for (let i = 0; i < pessoas; i ++) {
     const idade = ask("Digite a tua idade: ");
@@ -20,20 +23,24 @@ for (let i = 0; i < pessoas; i ++) {
 
     if(idade >= 1 && idade <= 10) {
         peso1a10 = peso1a10 + pesoNum;
+        pessoas1a10 = pessoas1a10 + 1;
     }
 
     if(idade > 10 && idade < 21) {
         peso11a20 = peso11a20 + pesoNum;
+        pessoas11a20 = pessoas11a20 + 1;
     }
 
     if(idade >= 21 && idade < 31) {
         peso21a30 = peso21a30 + pesoNum;
+        pessoas21a30 = pessoas21a30 + 1;
     }
 
     if(idade >= 31) {
         pesoMais31 = pesoMais31 + pesoNum;
+        pessoasMais31 = pessoasMais31 + 1;
     }
 }
 
 //FALTOU AGRUPAR A QUANTIDADE DE GENTE POR INTERVALO, PARA CONSEGUIR DIVIDIR CERTINHO NAS MEDIAS
-console.log(`A media de pesos por intervalo é de: ${peso1a10/pessoas}; ${peso11a20/pessoas}; ${peso21a30/pessoas}; ${pesoMais31/pessoas}`)
+console.log(`A media de pesos por intervalo é de: ${peso1a10/pessoas1a10} kg; ${peso11a20/pessoas11a20}kg; ${peso21a30/pessoas21a30}kg; ${pesoMais31/pessoasMais31}kg`)
