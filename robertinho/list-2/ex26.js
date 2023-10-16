@@ -34,3 +34,6 @@ for (let i = 0; i < pessoas; i ++) {
         pesoMais31 = pesoMais31 + pesoNum;
     }
 }
+
+//FALTOU AGRUPAR A QUANTIDADE DE GENTE POR INTERVALO, PARA CONSEGUIR DIVIDIR CERTINHO NAS MEDIAS
+console.log(`A media de pesos por intervalo é de: ${peso1a10/pessoas}; ${peso11a20/pessoas}; ${peso21a30/pessoas}; ${pesoMais31/pessoas}`)
