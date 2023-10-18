@@ -42,5 +42,4 @@ for (let i = 0; i < pessoas; i ++) {
     }
 }
 
-//FALTOU AGRUPAR A QUANTIDADE DE GENTE POR INTERVALO, PARA CONSEGUIR DIVIDIR CERTINHO NAS MEDIAS
 console.log(`A media de pesos por intervalo é de: ${peso1a10/pessoas1a10} kg; ${peso11a20/pessoas11a20}kg; ${peso21a30/pessoas21a30}kg; ${pesoMais31/pessoasMais31}kg`)

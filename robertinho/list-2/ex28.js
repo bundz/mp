@@ -50,3 +50,7 @@ for (i = 0; i < entrevistados; i ++) {
 
 }
 
+console.log(`O número de pessoas que respondeu sim: ${simTotal}`);
+console.log(`O número de pessoas que respondeu não: ${naoTotal}`);
+console.log(`O número de mulheres que respondeu sim: ${simMulheres}`);
+console.log(`A percentagem de homens que respondeu não entre todos os homens analisados: ${(naoHomens/homensAgrupados)*100}%`);
