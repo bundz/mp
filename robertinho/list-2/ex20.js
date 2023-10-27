@@ -6,12 +6,11 @@
 const prompt = require("prompt-sync");
 const ask = prompt();
 
-let pessoas = 5;
+let pessoas = 3;
 let idadeTotal = 0;
 let media = Number(idadeTotal);
 let baixoEPesado = 0;
 let entre10e30 = 0;
-let maior190 = 0;
 
 
 for (let i = 0; i < pessoas; i ++) {
@@ -26,15 +25,12 @@ for (let i = 0; i < pessoas; i ++) {
         baixoEPesado = baixoEPesado + 1;
     }
 
-    if (idade >= 10 && idade <= 30) {
+    if (idade >= 10 && idade <= 30 && altura > 190) {
         entre10e30 = entre10e30 + 1;
     }
 
-    if (altura > 190) {
-        maior190 = maior190 + 1;
-    }
 }
 
-console.log(`A media de idades das pessoas e: ${media/pessoas}`);
+console.log(`A media de idades das pessoas e: ${media/pessoas} anos`);
 console.log(`A quantidade de pessoas com peso superior a 90 quilos e altura inferior a 150cm e: ${baixoEPesado}`);
-//console.log(``);
+console.log(`A porcentagem de pessoas com idade entre 10 e 30 anos entre as pessoas que medem mais de 190cm e: ${(entre10e30/pessoas)*100} %`);
