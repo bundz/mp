@@ -1,65 +1,41 @@
-//Faça um programa que leia três números e mostre-os em ordem decrescente.
+// Faça um programa que leia três números e mostre-os em ordem decrescente. 
 
 const prompt = require("prompt-sync");
 const ask = prompt();
 
-const primeiroNumero = ask("Me diga o primerio número: ");
-const segundoNumero = ask("Me diga o segundo número: ");
-const terceiroNumero = ask("Me diga o terceiro número: ");
+const primeiroNumero = ask("1º número: ");
+const segundoNumero = ask("2º número: ");
+const terceiroNumero = ask("3º número: ");
+const numeroUm = Number(primeiroNumero);
+const numeroDois = Number(segundoNumero);
+const numeroTres = Number(terceiroNumero);
 
-let primeiroValor = Number(primeiroNumero);
-let segundoValor = Number(segundoNumero);
-let terceiroValor = Number(terceiroNumero);
+let top = numeroTres;
+let mid= numeroTres;
+let bot = numeroTres;
 
-let topNumber = 0;
-let middleNumber = 0;
-let bottomNumber = 0;
-
-if(primeiroValor > segundoValor && primeiroValor > terceiroValor && segundoValor > terceiroValor) {
-    topNumber = primeiroValor;
-
-
+if (numeroUm > numeroDois && numeroUm > numeroTres) {
+    top = numeroUm;
 }
 
-if(segundoValor > primeiroValor && segundoValor > terceiroValor && terceiroValor > segundoValor) {
-    topNumber = segundoValor;
-
-
-}
-if(terceiroValor > primeiroValor && terceiroValor > segundoValor && primeiroValor > terceiroValor) {
-    topNumber = terceiroValor;
-
+if (numeroDois > numeroUm && numeroDois > numeroTres) {
+    top = numeroDois;
 }
 
-if(primeiroValor < segundoValor && primeiroValor < terceiroValor) {
-    bottomNumber = primeiroValor;
-    
+if (numeroUm > numeroDois  && numeroUm < numeroTres || numeroUm < numeroDois && numeroUm > numeroTres) {
+    mid = numeroUm;
 }
 
-if(segundoValor < primeiroValor && segundoValor < terceiroValor) {
-    bottomNumber = segundoValor;
-
-}
-if(terceiroValor < primeiroValor && terceiroValor < segundoValor) {
-    bottomNumber = terceiroValor;
-
+if (numeroDois > numeroUm && numeroDois < numeroTres || numeroDois < numeroUm && numeroDois > numeroTres) {
+    mid = numeroDois;
 }
 
-if(primeiroValor > segundoValor && primeiroValor < terceiroValor) {
-    middleNumber = primeiroValor;
-
+if (numeroUm < numeroDois && numeroUm < numeroTres) {
+    bot = numeroUm;
 }
 
-if(segundoValor > primeiroValor && segundoValor < terceiroValor) {
-    middleNumber = segundoValor;
-
+if (numeroDois < numeroUm && numeroDois < numeroTres) {
+    bot = numeroDois;
 }
 
-if(terceiroValor > primeiroValor && terceiroValor < segundoValor) {
-    middleNumber = terceiroValor;
-
-}
-
-console.log(topNumber);
-console.log(middleNumber);
-console.log(bottomNumber);
+console.log(`Ordem Decrescente:(${top};${mid};${bot})`);
