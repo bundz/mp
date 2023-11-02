@@ -5,18 +5,21 @@ const ask = prompt();
 
 const inteiro = ask ("Digite um numero: ");
 
+const pares = [];
+const impares = [];
+
+if (inteiro <= 0) {
+    console.log('Insira um inteiro valido');
+}
+
+if (inteiro > 0) {
 for (let i = 0; i <= inteiro; i = i +1) {
     if (i % 2 == 0) {
-        console.log(`Par: ${i}`);
+        pares.push(i);
     }
-}
-
-for (let i = 0; i <= inteiro; i = i +1) {
     if (i % 2 != 0) {
-        console.log(`Impar: ${i}`);
+        impares.push(i);
     }
 }
-
-if (inteiro == 0) {
-    console.log('Insira um inteiro valido');
+    console.log(`Os números pares são: ${pares} | Os números ímpares são:  ${impares}`);
 }

@@ -10,6 +10,10 @@ const ask = prompt();
 
 let alunos = 3;
 let notaFinal = 0;
+let maiorNota = 0;
+let menorNota;
+let reprovados = 0;
+let infrequentes = 0;
 
 for (let i = 0; i < alunos; i++) {
     const matricula = ask("Informe o teu número de matrícula: ");
@@ -24,7 +28,46 @@ for (let i = 0; i < alunos; i++) {
     
     notaFinal = (nota1 + nota2 + nota3)/3;
 
-    console.log(notaFinal);
+    if (notaFinal >= 7 && frequencia > 70) {
+        let status = Aprovado;
+    }
+
+    if (notaUm > maiorNota) {
+        maiorNota = notaUm;
+    }
+
+    if (notaDois > maiorNota) {
+        maiorNota = notaDois;
+    }
+
+    if (notaTres > maiorNota) {
+        maiorNota = notaTres
+    }
+
+    if (menorNota > notaUm) {
+        menorNota = notaUm;
+    }
+
+    if (menorNota > notaDois) {
+        menorNota = notaDois;
+    }
+
+    if (menorNota > notaTres) {
+        menorNota = notaTres;
+    }
+
+    if (notaFinal < 7 && frequencia < 70) {
+        let status = Reprovado;
+        reprovados = reprovados + 1;
+    }
+
+    if (frequencia < 70) {
+        infrequentes = infrequentes + 1;
+    }
+
+    console.log(`A matricula do aluno é: ${matricula}; Nota Final: ${notaFinal}; Status: ${status}`);
 }
 
-//QUERO VER QUAL A MÉDIA E QUAL A FREQUENCIA NECESSARIA PARA APROVACAO
+console.log(`A maior nota é: ${maiorNota} e a menor nota é: ${menorNota}`);
+console.log(`O total de alunos reprovados é: ${reprovados}`);
+console.log(`O total de alunos reprovados por frequencia é: ${infrequentes}`);
