@@ -11,7 +11,7 @@ const ask = prompt();
 let alunos = 3;
 let notaFinal = 0;
 let maiorNota = 0;
-let menorNota;
+let menorNota = 10;
 let reprovados = 0;
 let infrequentes = 0;
 
@@ -25,12 +25,9 @@ for (let i = 0; i < alunos; i++) {
     let nota1 = Number(notaUm);
     let nota2 = Number(notaDois);
     let nota3 = Number(notaTres);
+    let status = 'aprovado';
     
     notaFinal = (nota1 + nota2 + nota3)/3;
-
-    if (notaFinal >= 7 && frequencia > 70) {
-        let status = Aprovado;
-    }
 
     if (notaUm > maiorNota) {
         maiorNota = notaUm;
@@ -56,13 +53,15 @@ for (let i = 0; i < alunos; i++) {
         menorNota = notaTres;
     }
 
-    if (notaFinal < 7 && frequencia < 70) {
-        let status = Reprovado;
+    if (notaFinal < 7) {
+        status = 'reprovado';
         reprovados = reprovados + 1;
     }
 
     if (frequencia < 70) {
         infrequentes = infrequentes + 1;
+        status = 'reprovado';
+        reprovados = reprovados + 1;
     }
 
     console.log(`A matricula do aluno é: ${matricula}; Nota Final: ${notaFinal}; Status: ${status}`);
