@@ -13,3 +13,46 @@
 const prompt = require("prompt-sync");
 const ask = prompt();
 
+const combustivel = ask("Qual o tipo de combustível? ");
+const litros = ask("Digite quantos litros voce gostaria: ");
+
+const Litros = Number(litros);
+let alcool = 2.52;
+let gasolina = 5.87;
+let litrosAbastecidos = 0;
+let totalPagar = 0;
+
+if (combustivel == "A") {
+    if (Litros == 0) {
+        console.log(`Insira um valor de litros.`);
+    } else {
+        if (Litros > 0 && Litros <= 20) {
+            litrosAbastecidos = (alcool*Litros);
+            desconto = (litrosAbastecidos*0.03);
+        }
+        else {
+            litrosAbastecidos = (alcool*Litros);
+            desconto = (litrosAbastecidos*0.05);
+        }
+        totalPagar = (litrosAbastecidos-desconto);
+    }
+}
+
+if (combustivel == "G") {
+    if (Litros == 0) {
+        console.log(`Insira um valor de litros.`);
+    } else {
+        if (Litros > 0 && Litros <= 20) {
+            litrosAbastecidos = (gasolina*Litros);
+            desconto = (litrosAbastecidos*0.04);
+        }
+        else {
+            litrosAbastecidos = (gasolina*Litros);
+            desconto = litrosAbastecidos*0.06;
+        }
+        totalPagar = (litrosAbastecidos-desconto);
+    }
+
+}
+
+console.log(`O valor total é: ${totalPagar}`);
