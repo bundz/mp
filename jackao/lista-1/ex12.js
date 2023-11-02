@@ -11,7 +11,7 @@ const horasTrabalhadas = Number(horasTrabalhadasInput);
 
 //Algoritmo
 let salario = valorHora * horasTrabalhadas;
-let inss = 0.03 * salario;
+let inss = 0.10 * salario;
 let fgts = 0.11 * salario;
 let impostoRenda = 0;
 

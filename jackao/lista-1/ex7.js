@@ -15,37 +15,37 @@ let terceiroValor = Number(terceiroNumero);
 let maiorNumero = 0;
 let menorNumero = 0;
 
-if(primeiroValor > segundoValor && primeiroValor > terceiroValor) {
+if(primeiroValor >= segundoValor && primeiroValor >= terceiroValor) {
     maiorNumero = primeiroValor;
 
 }
 
-if(segundoValor > primeiroValor && segundoValor > terceiroValor) {
+if(segundoValor >= primeiroValor && segundoValor >= terceiroValor) {
     maiorNumero = segundoValor;
 
 
 }
-if(terceiroValor > primeiroValor && terceiroValor > segundoValor) {
+if(terceiroValor >= primeiroValor && terceiroValor >= segundoValor) {
     maiorNumero = terceiroValor;
 
 }
 
-if(primeiroValor < segundoValor && primeiroValor < terceiroValor) {
+if(primeiroValor <= segundoValor && primeiroValor <= terceiroValor) {
     menorNumero = primeiroValor;
     
 }
 
-if(segundoValor < primeiroValor && segundoValor < terceiroValor) {
+if(segundoValor <= primeiroValor && segundoValor <= terceiroValor) {
     menorNumero = segundoValor;
 
 }
-if(terceiroValor < primeiroValor && terceiroValor < segundoValor) {
+if(terceiroValor <= primeiroValor && terceiroValor <= segundoValor) {
     menorNumero = terceiroValor;
 }
 
 
 if(primeiroValor == segundoValor && primeiroValor == terceiroValor && segundoValor == terceiroValor) {
-    console.log(`O ${primeiroValor} é igual em amos os três!`);
+    console.log(`O ${primeiroValor} é igual em ambos os três!`);
 }
 
 console.log(`O maior número é o ${maiorNumero}`);

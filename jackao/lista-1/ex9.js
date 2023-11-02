@@ -10,32 +10,32 @@ const numeroUm = Number(primeiroNumero);
 const numeroDois = Number(segundoNumero);
 const numeroTres = Number(terceiroNumero);
 
-let top = numeroUm;
-let mid= numeroDois;
+let top = numeroTres;
+let mid= numeroTres;
 let bot = numeroTres;
 
-if (numeroDois < top && numeroDois < numeroTres) {
+if (numeroUm > numeroDois && numeroUm > numeroTres) {
+    top = numeroUm;
+}
+
+if (numeroDois > numeroUm && numeroDois > numeroTres) {
     top = numeroDois;
 }
 
-if (numeroTres < top && numeroTres < numeroDois) {
-    top = numeroTres;
-}
-
-if (numeroUm > mid && numeroUm > numeroTres) {
+if (numeroUm > numeroDois  && numeroUm < numeroTres || numeroUm < numeroDois && numeroUm > numeroTres) {
     mid = numeroUm;
 }
 
-if (numeroTres < mid && numeroTres < numeroDois) {
-    mid = numeroTres;
+if (numeroDois > numeroUm && numeroDois < numeroTres || numeroDois < numeroUm && numeroDois > numeroTres) {
+    mid = numeroDois;
 }
 
-if (numeroUm > bot && numeroUm > numeroDois) {
+if (numeroUm < numeroDois && numeroUm < numeroTres) {
     bot = numeroUm;
 }
 
-if (numeroDois > bot && numeroDois > numeroUm) {
+if (numeroDois < numeroUm && numeroDois < numeroTres) {
     bot = numeroDois;
 }
 
-console.log(`Ordem Decrescente:(${bot};${mid};${top})`);
+console.log(`Ordem Decrescente:(${top};${mid};${bot})`);
