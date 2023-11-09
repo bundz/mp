@@ -11,5 +11,3 @@ for (let i = 0; i < arrayBase.length; i++) {
 }
 
 console.log(array);
-
-// NÃO ENTENDI MUITO BEM O ENUNCIADO, VER COM O DEDÃO
