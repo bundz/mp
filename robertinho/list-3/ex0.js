@@ -18,7 +18,7 @@ while (inicio == "sim") {
         soma = soma + Number(cpf[i]);
     }
 
-    if (soma % 2 == 0) {
+    if (soma % 11 == 0) {
         console.log(`${cpf} é um CPF válido!`);
     }
 
