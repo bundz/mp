@@ -7,3 +7,15 @@ const ask = prompt();
 
 const heigth = ask("Digite tua altura (metros): ");
 const sex = ask("Informe teu sexo (M/F): ");
+
+function idealWeight (heigth, sex) {
+    if (sex == "M") {
+        return (`O peso ideal é: ${(72.7 * Number(heigth)-58)} kg`);
+    }
+
+    if (sex == "F") {
+        return (`O peso ideal é: ${(62.1 * Number(heigth)-44.7)} kg`);
+    }
+}
+
+console.log(idealWeight(heigth,sex));
