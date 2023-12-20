@@ -1,24 +1,21 @@
-const formulario = document.querySelector(form);
-const validador = document.querySelector(h3);
+let cpf = document.querySelector(inCPF);
+let buttonValidar = document.querySelector(validar);
+let eValido = document.querySelector(validador);
+let soma = 0;
 
-
-formulario.addEventListener("submit", (e) => {
-    e.preventDefault ();
-
-    const cpf = formulario.inCPF.value;
-    let soma = 0;
+buttonValidar.onclick = function() {
 
     for (let i = 0; i < cpf.length; i ++) {
         soma = soma + Number(cpf[i]);
     }
 
     if (soma % 11 == 0) {
-        validador.innertext = 'Válido';
-        validador.style.color = "green";
+        eValido.innertext = 'Válido';
+        eValido.style.color = "green";
     }
 
     if (cpf.length < 11 || cpf.length > 11) {
-        validador.innertext = 'Inválido';
-        validador.style.color = "red";
+        eValido.innertext = 'Inválido';
+        eValido.style.color = "red";
     }
-})
+}
