@@ -1,21 +1,22 @@
-let cpf = document.querySelector(inCPF);
-let buttonValidar = document.querySelector(validar);
-let eValido = document.querySelector(validador);
+let cpf = document.getElementById("inCPF");
+let buttonValidar = document.getElementById("validar");
+let eValido = document.getElementById("validador");
 let soma = 0;
 
-buttonValidar.onclick = function() {
+buttonValidar.onclick = function () {
 
     for (let i = 0; i < cpf.length; i ++) {
         soma = soma + Number(cpf[i]);
     }
 
     if (soma % 11 == 0) {
-        eValido.innertext = 'Válido';
+        eValido.innerText = 'Válido';
         eValido.style.color = "green";
-    }
-
-    if (cpf.length < 11 || cpf.length > 11) {
-        eValido.innertext = 'Inválido';
+    } else {
+        eValido.innerText = 'Inválido';
         eValido.style.color = "red";
     }
+    return
 }
+
+console.log(eValido);
